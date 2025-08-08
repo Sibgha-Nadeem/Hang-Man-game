@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman game</title>
+     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+     <link rel="stylesheet" href="hangman.css">
+</head>
+<body>
+      <audio class="audio" loop autoplay="autoplay" controls id="audioelement" hidden>
+    <source src="sound/hangman-background-sound.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+    <div class="container">
+        <h1>WELCOME TO HANGMAN</h1>
+        <ul>
+            <li> In ONE-PLAYER Hangman, you guess letters to reveal a hidden word before a stick figure is fully drawn. </li>
+            <li>The game starts with dashes representing the word's letters.</li>
+            <li>You guess letters, and if correct, they appear in the word.</li>
+            <li>Incorrect guesses add a part to the stick figure (head, body, limbs).</li>
+            <li> The game ends when you guess the word or the stick figure is complete.</li>
+        </ul>
+        <button id="btn">START GAME</button>
+    </div>
+     <canvas id="canvas"></canvas>
+    <h2></h2>
+    <p id="para1"></p>
+    <h4></h4>
+    <div class="game-box">
+            <ul class="word-display">
+            </ul>
+    </div>
+    <div class="contsianer">
+        <button id="Hint">DESCRIPTION</button>
+        <button id="tip">TIPS</button>
+        <button id="rules">GO BACK</button>
+    </div>
+        <div class="main-container" id="main-cont">
+            <div class="popup-cont">
+                <h1>TIPS</h1>
+                <ul>
+                    <li>Use your vowels. Looking at vowels is a good way to start.</li>
+                    <li>After trying your vowels, try out a few letters like E and T to see if they appear in the word!</li>
+                    <li>Break down phrases. </li>
+                    <li>Don't forget your Js and Zs.</li>
+                </ul>
+                <button id="close">Ok!</button>
+            </div>
+        </div>
+         <div class="m-c" id="m-cont">
+            <div class="hint-cont">
+                <h1>HINT</h1>
+                <p id="para2"></p>
+                <button id="cllose">Ok!</button>
+            </div>
+        </div>
+        <div id="keyboardd">
+            <div class="row">
+                <button class="kkey" data-key="q">Q</button>
+                <button class="kkey" data-key="w">W</button>
+                <button class="kkey" data-key="e">E</button>
+                <button class="kkey" data-key="r">R</button>
+                <button class="kkey" data-key="t">T</button>
+                <button class="kkey" data-key="y">Y</button>
+                <button class="kkey" data-key="u">U</button>
+                <button class="kkey" data-key="i">I</button>
+                <button class="kkey" data-key="o">O</button>
+                <button class="kkey" data-key="p">P</button>
+            </div>
+            <div class="row">
+                <button class="kkey" data-key="a">A</button>
+                <button class="kkey" data-key="s">S</button>
+                <button class="kkey" data-key="d">D</button>
+                <button class="kkey" data-key="f">F</button>
+                <button class="kkey" data-key="g">G</button>
+                <button class="kkey" data-key="h">H</button>
+                <button class="kkey" data-key="j">J</button>
+                <button class="kkey" data-key="k">K</button>
+                <button class="kkey" data-key="l">L</button>
+            </div>
+            <div class="row">
+                <button class="kkey" data-key="z">Z</button>
+                <button class="kkey" data-key="x">X</button>
+                <button class="kkey" data-key="c">C</button>
+                <button class="kkey" data-key="v">V</button>
+                <button class="kkey" data-key="b">B</button>
+                <button class="kkey" data-key="n">N</button>
+                <button class="kkey" data-key="m">M</button>
+            </div>
+        </div>
+        <div class="winning-container" id="win-cont">
+            <div class="winning">
+                <h1>YOU WIN!</h1>
+                <p id="winp">CONGRATULATIONS!</p>
+                <button id="home">PLAY AGAIN?</button>
+                <button id="win_back">QUIT</button>
+            </div>
+        </div>
+        <div class="losing-c" id="lose-cont">
+            <div class="losing">
+                <h1>YOU LOSE!</h1>
+                <p id="losep"></p>
+                <button id="Home">PLAY AGAIN?</button>
+                <button id="back">QUIT</button>
+            </div>
+        </div>
+
+    <script src="hangaman.js"></script>
+</body>
+</html>
